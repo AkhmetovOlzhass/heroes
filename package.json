@@ -1,7 +1,8 @@
 {
-  "name": "hero_admin_panel",
+  "name": "heroes",
   "version": "0.1.0",
   "private": true,
+  "homepage": "https://sharn1999.github.io/heroes",
   "dependencies": {
     "@reduxjs/toolkit": "^1.5.1",
     "@testing-library/jest-dom": "^4.2.4",
@@ -20,6 +21,8 @@
     "uuid": "^8.3.2"
   },
   "scripts": {
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build",
     "start": "concurrently \"react-scripts start\" \"npx json-server heroes.json --port 3001\"",
     "build": "react-scripts build",
     "test": "react-scripts test",
